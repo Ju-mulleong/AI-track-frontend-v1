@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist",
     "start": "parcel serve index.html",
-    "build": "parcel build index.html --public-url /AI-track-frontend-v1/",
-    "deploy": "gh-pages -d dist"
+    "build:github": "parcel build index.html --public-url /AI-track-frontend-v1/",
+    "build": "parcel build index.html",
+    "deploy:github": "npm run build:github && gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
